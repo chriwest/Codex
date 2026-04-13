@@ -1,0 +1,7 @@
+{
+  "name": "snake-game",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}
