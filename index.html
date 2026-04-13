@@ -24,6 +24,23 @@
           Use arrow keys or WASD to move. Press space to pause. Press restart to begin again.
         </p>
 
+        <form id="player-form" class="player-form">
+          <label class="player-form__label" for="player-name">Username</label>
+          <div class="player-form__row">
+            <input
+              id="player-name"
+              class="input"
+              name="playerName"
+              type="text"
+              maxlength="20"
+              autocomplete="nickname"
+              placeholder="Enter a username"
+            />
+            <button class="button" type="submit">Save Name</button>
+          </div>
+          <p id="player-message" class="helper-text">Enter a username to save high scores.</p>
+        </form>
+
         <div class="status-row">
           <p id="status" class="status">Press any direction to start.</p>
           <button id="restart-button" class="button" type="button">Restart</button>
@@ -39,6 +56,17 @@
             <button class="button control" data-direction="right" type="button">Right</button>
           </div>
         </div>
+
+        <section class="leaderboard" aria-labelledby="leaderboard-title">
+          <div class="leaderboard__header">
+            <h2 id="leaderboard-title">Leaderboard</h2>
+            <button id="refresh-scores-button" class="button button--small" type="button">
+              Refresh
+            </button>
+          </div>
+          <p id="leaderboard-message" class="helper-text">Loading scores...</p>
+          <ol id="leaderboard-list" class="leaderboard__list"></ol>
+        </section>
       </section>
     </main>
 
